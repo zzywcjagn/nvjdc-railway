@@ -1,5 +1,7 @@
-FROM asupc/qqbot
-RUN apt-get update && apt-get install git && git clone https://github.com/asupc/qqbot-multi-platform.git /app
+FROM cheche/nvjdc
+RUN apt-get update && apt-get install git wget && git clone https://github.com/shiunke/nvjdcdocker.git /app \
+  && mkdir /app/Config \
+  && wget https://pan.yropo.workers.dev/source/configs/nvjdc_Config.json -O /app/Config/Config.json
 WORKDIR /app
-EXPOSE 5010
-ENTRYPOINT ["dotnet" "QQBot.Web.dll"]
+EXPOSE 80 443
+ENTRYPOINT ["dotnet" "NETJDC.dll"]
