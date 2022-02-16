@@ -6,4 +6,4 @@ RUN apt-get update && apt-get install git wget \
   && wget https://pan.yropo.workers.dev/source/configs/nvjdc_Config.json -O /app/Config/Config.json
 WORKDIR /app
 EXPOSE 80 443
-ENTRYPOINT ["/usr/bin/dotnet" "NETJDC.dll"]
+ENTRYPOINT ["/usr/bin/dotnet","NETJDC.dll"]
