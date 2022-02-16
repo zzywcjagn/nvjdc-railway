@@ -6,4 +6,4 @@ RUN apt-get update && apt-get install git wget && rm -rf /app/* \
   && chmod 777 /app/NETJDC.dll /usr/bin/dotnet
 WORKDIR /app
 EXPOSE 80 443
-ENTRYPOINT ["dotnet" "/app/NETJDC.dll"]
+ENTRYPOINT ["dotnet","NETJDC.dll"]
